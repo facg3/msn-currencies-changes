@@ -1,0 +1,29 @@
+{
+  "name": "msn-currencies-changes",
+  "version": "1.0.0",
+  "description": "this is currencies change project for node.js week5",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/tests/routs.test.js | tap-spec",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facg3/msn-currencies-changes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facg3/msn-currencies-changes/issues"
+  },
+  "homepage": "https://github.com/facg3/msn-currencies-changes#readme",
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.12.4",
+    "shot": "^3.4.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  }
+}
