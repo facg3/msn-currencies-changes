@@ -1,6 +1,8 @@
 # MSN-currencieschange
 this is currencies change project for node.js week5
 
+### you can see our project here : https://msn-currencies-changes.herokuapp.com
+
 
 ## WHO WE ARE!
 
@@ -41,3 +43,6 @@ Run npm install to install all dependencies
 Run npm run watch to start the server using nodemon (which will automatically restart Node when changes are detected in your files)
 
 You can run the code locally at localhost:8000
+
+
+### Star this repo and fork it ^_^
