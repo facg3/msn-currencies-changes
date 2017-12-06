@@ -19,12 +19,12 @@ this is currencies change project for node.js week5
 
 ## PROJECT STRUCTURE!
 
-- Public: which contains the front-end files
+### Public: which contains the front-end files
 * tests
 * dom.js
 * index.html
 * style.css
-- src: which contains the back-end files
+### src: which contains the back-end files
 * countries.json
 * handler.js
 * router.js
