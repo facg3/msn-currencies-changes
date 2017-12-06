@@ -6,6 +6,8 @@ const router = (request, response) => {
     handler.handleHomePage(request, response);
   } else if (endpoint.startsWith('/public')) {
     handler.generic(request, response);
+  } else if (endpoint === '/concurrent') {
+    handler.concurrent(request, response);
   } else {
     response.writeHead(404);
     response.end('Page Not Found');

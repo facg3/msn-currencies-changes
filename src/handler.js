@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const request = require('request');
+const logic = require('./logic');
 
 const handleHomePage = (request, response) => {
   fs.readFile(path.join(__dirname, '/..', 'public', 'index.html'), (error, file) => {
@@ -33,8 +35,31 @@ const generic = (request, response) => {
   });
 };
 
-
+const concurrent = (req, res) => {
+  let body = '';
+  req.on('data', (chunk) => {
+    body += chunk;
+  }).on('end', () => {
+    // logic.apiRequest(body);
+    const option = {
+      url: `https://poloniex.com/public?command=returnOrderBook&currencyPair=${body}&depth=10`,
+      headers: {
+        'User-Agent': 'request',
+      },
+    };
+    request(option, (error, result, body) => {
+      if (error) {
+        console.log(error);
+      }
+      if (result.statusCode === 200) {
+        res.writeHead(200, 'content-Type:application/json');
+        res.end(body);
+      }
+    });
+  });
+};
 module.exports = {
   handleHomePage,
   generic,
+  concurrent,
 };
