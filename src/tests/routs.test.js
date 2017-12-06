@@ -14,3 +14,9 @@ test('handle one of generic pages', (t) => {
     t.end();
   });
 });
+test('concurrent', (t) => {
+  shot.inject(router, { method: 'get', url: '/concurrent' }, (res) => {
+    t.equal(res.statusCode, 200, 'should respond with status code of 200');
+    t.end();
+  });
+});
