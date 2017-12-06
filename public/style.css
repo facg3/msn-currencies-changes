@@ -1,58 +1,71 @@
-body{
+body {
   margin: 0;
   padding: 0;
   color: #444;
   letter-spacing: 1px;
+  background-image: url(./background.jpg);
 }
 
-.wrapper{
-    width: 95%;
-    max-width: 1170px;
-    margin: 20px auto;
-    border-radius: 6px;
-    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
-    box-sizing: border-box;
-    padding: 0 0 20px;
-    overflow: hidden;
-    border: 1px solid lightgray;
+.wrapper {
+  margin-top: 20vh;
 }
-.page-banner{
-    padding: 10px 0;
+
+.page-banner {
+  padding: 10px 0;
 }
-.page-banner h1{
-    width: 100%;
-    text-align: center;
-    margin: 10px 0;
+
+.page-banner h1 {
+  width: 100%;
+  text-align: center;
+  margin: 3% 0;
+  color: #e7c891;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 50px;
 }
 
 #currenciesForm input {
-    width: 90%;
-    max-width: 300px;
-    margin: 20px auto;
-    display: block;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #444;
+  width: 90%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #444;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+}
 
-}
-h1{
-    width: 100%;
-    text-align: center;
-    color: black;
-    justify-content: center;
-    font-weight: normal;
-}
-.crate{
-  padding: 30px;
-  margin: 30px;
-  width: 100%;
-  text-align: center;
-  color: red;
+
+.selection {
+  display: flex;
   justify-content: center;
-  font-weight: normal;
+}
+
+select {
+  width: 6em;
+  height: 3em;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #ddd;
+  padding-left: 18px;
+  font-weight: 600;
+}
+
+.crate {
+  width: 70%;
+  background-color: azure;
+  margin: 0 auto;
+  margin-top: 2em;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 800;
+  color: black;
+  justify-content: center;
   font-style: italic;
-
-
+  font-family: Swash;
 }

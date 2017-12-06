@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="public/style.css">
+   <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Gloria+Hallelujah|Permanent+Marker|Rozha+One" rel="stylesheet">
   <title>Msn currencies changes</title>
 </head>
 
@@ -15,20 +16,23 @@
     </div>
     <div class="results">
       <form id="currenciesForm">
-        <select id="firstValue">
-            <option value="BTC">BTC</option>
-            <option value="ETH">ETH</option>
-            <option value="XMR">XMR</option>
-            <option value="USDT">USDT</option>
-        </select>
-        <select id="secondValue">
-            <option value="ETH">ETH</option>
-            <option value="ZEC">ZEC</option>
-            <option value="NXT">NXT</option>
-            <option value="BCH">BCH</option>
-            <option value="SC">SC</option>
-            <option value="LTC">LTC</option>
-        </select>
+        <div class="selection">
+          <select id="firstValue">
+              <option value="USDT">USDT</option>
+              <option value="BTC">BTC</option>
+              <option value="ETH">ETH</option>
+              <option value="XMR">XMR</option>
+          </select>
+          <select id="secondValue">
+              <option value="BTC">BTC</option>
+              <option value="ETH">ETH</option>
+              <option value="ZEC">ZEC</option>
+              <option value="NXT">NXT</option>
+              <option value="BCH">BCH</option>
+              <option value="SC">SC</option>
+              <option value="LTC">LTC</option>
+          </select>
+        </div>
         <input type="submit"  value="submit" />
       </form>
     </div>

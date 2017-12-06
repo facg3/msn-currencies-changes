@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const request = require('request');
-const logic = require('./logic');
+// const logic = require('./logic');
 
-const handleHomePage = (request, response) => {
+const handleHomePage = (req, response) => {
   fs.readFile(path.join(__dirname, '/..', 'public', 'index.html'), (error, file) => {
     if (error) {
       response.writeHead(500, { 'content-Type': 'text/html' });
@@ -14,8 +14,8 @@ const handleHomePage = (request, response) => {
     }
   });
 };
-const generic = (request, response) => {
-  const endpoint = request.url;
+const generic = (req, response) => {
+  const endpoint = req.url;
   const extension = endpoint.split('.')[1];
   const fileType = {
     html: 'text/html',
@@ -40,20 +40,19 @@ const concurrent = (req, res) => {
   req.on('data', (chunk) => {
     body += chunk;
   }).on('end', () => {
-    // logic.apiRequest(body);
     const option = {
       url: `https://poloniex.com/public?command=returnOrderBook&currencyPair=${body}&depth=10`,
       headers: {
         'User-Agent': 'request',
       },
     };
-    request(option, (error, result, body) => {
+    request(option, (error, result, dataApi) => {
       if (error) {
         console.log(error);
       }
       if (result.statusCode === 200) {
         res.writeHead(200, 'content-Type:application/json');
-        res.end(body);
+        res.end(dataApi);
       }
     });
   });
