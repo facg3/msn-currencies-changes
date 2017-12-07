@@ -8,7 +8,7 @@ function fetch(url, data, callback) {
       callback(response);
     }
   };
-  xhr.open('POST', url);
+  xhr.open('GET', url);
   if (data) {
     xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     xhr.send(data);
@@ -22,9 +22,8 @@ function btnListener() {
     event.preventDefault();
     const currencies = data();
     fetch('/concurrent', currencies, (response) => {
-      // console.log(response);
+
       const nameC = document.querySelector('.crate');
-      // currenciesFunctions.rateCurrencies(response);
       nameC.innerHTML = `Every one of ${document.getElementById('secondValue').value} equal
       ${currenciesFunctions.rateCurrencies(response)} from
       ${document.getElementById('firstValue').value}`;
