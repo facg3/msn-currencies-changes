@@ -59,5 +59,5 @@ const concurrent = (req, res) => {
 module.exports = {
   handleHomePage,
   generic,
-  concurrent
+  concurrent,
 };
