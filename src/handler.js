@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const request = require('request');
-// const logic = require('./logic');
 
 const handleHomePage = (req, response) => {
   fs.readFile(path.join(__dirname, '/..', 'public', 'index.html'), (error, file) => {
